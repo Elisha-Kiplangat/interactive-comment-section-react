@@ -2,15 +2,21 @@
 
 import './App.scss'
 import AddComment from './components/AddComment'
-import CommentList from './components/CommentList'
+import AllReply from './components/Reply/AllReply'
+import CommentList from './components/Comments/CommentList'
+import ReplyUser from './components/Reply/ReplyUser'
 
 function App() {
 
 
   return (
     <>
-      <CommentList />
-      <AddComment />
+      <div className="cover">
+        <CommentList />
+        <AllReply />
+        <ReplyUser/>
+        <AddComment />
+      </div>  
     </>
   )
 }
