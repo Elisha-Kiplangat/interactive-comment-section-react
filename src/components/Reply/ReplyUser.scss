@@ -1,5 +1,6 @@
 .container-reply-user {
     display: flex;
+    flex-direction: column;
     justify-content: flex-end;
     align-items: center;
     padding: 20px;
@@ -11,6 +12,7 @@
         max-width: 450px;
         background-color: #fff;
         padding: 20px;
+        margin-bottom: 20px;
         border-radius: 8px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         border-left: 3px solid #df1414;
