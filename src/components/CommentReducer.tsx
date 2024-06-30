@@ -7,13 +7,22 @@ export interface Comment {
 
 }
 
+export const initialComments: Comment[] = [
+        {
+            id: 1,
+            user: 'John Doe',
+            time: '1 hour ago',
+            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros eget sapien porttitor maximus.',
+            likes: 12
+        }
+];
+
 type Action = 
-  { type: 'ADD_COMMENT', payload: Comment } 
-| { type: 'LIKE_COMMENT', payload: number }
+  { type: 'ADD_COMMENT', payload: Comment }
+| { type: 'LIKE_COMMENT', payload: number };
 
 
-const CommentReducer = () => {
-    return (state: Comment[], action: Action): Comment[] => {
+const CommentReducer = (state: Comment[], action: Action): Comment[] => {
         switch(action.type){
             case 'ADD_COMMENT':
                 return [...state, action.payload]
@@ -28,16 +37,6 @@ const CommentReducer = () => {
     }
   
   
-}
+
 
 export default CommentReducer
-
-export const initialComments: Comment[] = [
-        {
-            id: 1,
-            user: 'John Doe',
-            time: '1 hour ago',
-            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros eget sapien porttitor maximus.',
-            likes: 12
-        }
-]
